@@ -1,0 +1,53 @@
+def enregistrer():
+    txt1="NOUVEAU PRODUIT"
+    print('-'*(len(txt1)+4))
+    print('|',txt1,'|')
+    print('-'*(len(txt1)+4))
+    print()
+    num = input(' Numero du produit : ')
+    nom = input(' Nom du produit : ')
+    try:
+        prix = int(input(' Montant HT du produit en Fcfa : '))
+    except:
+        print('Montant invalide !')
+    else:
+        with open('produit.txt','a') as pro:
+            print('',file=pro)
+            pro.write(f"Numero de produit : {num}\n")
+            pro.write(f"Nom : {nom}\n")
+            pro.write(f"Montant HT : {prix} Fcfa\n")
+            print('_'*30, file=pro)
+        print('\nProduit enregistré avec succès')
+
+def afficher():
+    txt2 = "LISTE DES PRODUITS"
+    print('-'*(len(txt2)+4))
+    print('|',txt2,'|')
+    print('-'*(len(txt2)+4))
+    pro = open("produit.txt",'r')
+    print(pro.read())
+    pro.close()
+
+titre = "PROGRAMME DE GESTION DE PRODUITS"
+print('-'*(len(titre)+4))
+print('|',titre,'|')
+print('-'*(len(titre)+4))
+val=True
+while val:
+    print()
+    print(' 1 - Enregistrer un produit')
+    print(' 2 - Afficher la liste des produits')
+    print(' 3 - Quitter \n')
+    try:
+        choix = int(input(' ----> '))
+        print()
+    except:
+        print('Choix invalide!')
+    else:
+        if choix == 1:
+            enregistrer()
+        elif choix == 2:
+            afficher()
+        elif choix == 3:
+            val=False
+            print("Merci et à très bientôt !\n")

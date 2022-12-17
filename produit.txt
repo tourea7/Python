@@ -1,0 +1,15 @@
+
+Numero de produit : aze333
+Nom : ananas
+Montant HT : 300 Fcfa
+______________________________
+
+Numero de produit : res24
+Nom : BANANE
+Montant HT : 250 Fcfa
+______________________________
+
+Numero de produit : Ann
+Nom : SDF
+Montant HT : 2345 Fcfa
+______________________________
